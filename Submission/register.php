@@ -1,0 +1,77 @@
+<?php
+include('login.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+if($_SESSION['coach'] == "Y"){
+    header("location: coach.php"); // Redirecting To Other Page
+    } else {
+    header("location: fans.php"); 
+    }
+}
+include('insert.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Register | NFLStats - The Premiere Stats Site</title>
+      <meta name="author" content="Giovanni Joubert">
+      <meta name="description" content="The Premiere Movie Database">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css" type="text/css">
+      <link rel="icon" href="img/favico.png" type="image/png">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+       <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+   </head>
+   <body>
+      <header>
+        
+         <nav>
+            
+            <ul class="topNav">
+                 <img alt="NFLStats Logo" class="topLogo" src="img/mainlogo.svg">
+                <li><a class="activeNav" href="index.php"><i class="fa fa-key"></i>Login</a></li>
+               <li><a class="greyd_menu" href="fans.php"><i class="fa fa-user-friends"></i>Fans  &amp; Players Dashboard</a></li>
+               <li><a class="greyd_menu" href="coach.php"><i class="fa fa-football-ball"></i>Coach Dashboard</a></li>
+                
+            </ul>
+         </nav>
+         <svg class="custom-header-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,100 100,0 100,100"/>
+         </svg>
+         <div class="welcome-msg">
+            <h1>Welcome</h1>
+            <h3>to The Premiere NFL Dashboard</h3>
+         </div>
+      </header>
+       
+     <div id="content-container">
+         
+         <form class="form-inline" style="margin:auto; width:50%" method="post" action="">
+             <h2>Register:</h2>
+  <div class="form-group">
+    <label for="cUsername">Username:</label>
+    <input type="text" class="form-control" name="cUsername" id="username">
+  </div>
+  <div class="form-group">
+    <label for="cPassword">Password:</label>
+    <input type="password" class="form-control" name="cPassword" id="cPassword">
+  </div>
+    <input type="hidden" name="coach" id="coach" value="N">
+             
+                 <input type="hidden" name="insert_action" value="insuser">
+  <button name="submit" value="login" type="submit" class="btn btn-default">Submit</button>
+             <div style="padding-top:10px; font-style:italic;"><?php echo $error; ?></div>
+           
+             
+</form>
+     
+          
+
+    </div>
+       
+
+   </body>
+</html>

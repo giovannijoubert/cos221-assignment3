@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+html {
+	height: 100%;
+}
+
+::selection {
+	background: #638ED3;
+}
+
+header {
+	background-image: linear-gradient(57deg, #144696 0%, #B52025 100%);
+	height: 430px;
+	position: relative;
+}
+
+.custom-header-shape {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10vw;
+}
+
+body {
+	margin: 0;
+	background: #fff;
+	background-repeat: no-repeat;
+	font-family: 'Rubik', sans-serif!important;
+}
+
+.image_construction{
+    width: 50%;
+}
+.home_construction{
+      text-align: center;
+    }
+
+
+
+.topLogo {
+	width: 15%;
+    margin: 15px;
+    position: relative;
+    float: left;
+}
+
+
+/* NAVIGATION BAR*/
+
+ul.topNav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    min-height: 100px;
+}
+
+ul.topNav li {
+	float: right;
+	margin: 15px;
+}
+
+ul.topNav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	margin: 3px;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-color ease-in-out 500ms;
+}
+
+ul.topNav li a:hover:not(.activeNav) {
+	color: #5A9AE5;
+	border-color: #5A9AE5;
+}
+
+ul.topNav li a.activeNav {
+	background: linear-gradient(65deg, #CE303C -25%, #3470C6 100%);
+	border-radius: 5px;
+	box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
+}
+
+.fa, .far, .fas{
+    margin-right:5px;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 970px) {
+    .insert_form{
+        float:none!important;
+        width: 100%!important;
+    }
+    .pageNav {
+     float: none!important; 
+     width: 100%!important;
+}
+    
+    
+.fans_output{
+    float:none!important;
+    width: 100%!important;
+}
+}
+
+@media only screen and (max-width: 600px) {
+	ul.topNav li {
+		float: none;
+	}
+	.topLogo {
+		width: 50%;
+		float: none;
+	}
+	header {
+		height: 500px;
+	}
+	.welcome-msg {
+        margin-top: 20px!important;
+
+	}
+    .homepage-hits{
+    margin: 130px 50px 5px 50px!important;
+}
+    
+    .image_404{
+    width: 100%;
+    }
+    
+    ul.coachNav li {
+    float: none!important;
+    }
+
+}
+
+h1{
+    font-weight: 700;
+}
+
+    
+h2,h3{
+    font-weight: 600;
+}
+
+
+
+
+/* NAVIGATION BAR*/
+
+
+.welcome-msg {
+	color: #ffffff;
+	text-align: center;
+	transition: transform ease-in-out 800ms;
+
+}
+
+.welcome-msg:hover {
+	-webkit-transform: scale(1.1) rotate(-5.5deg);
+}
+
+
+.hero-posters{
+    margin: 15px 50px 50px 50px;
+    overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+    padding: 30px;
+}
+
+.hero-posters::-webkit-scrollbar { 
+    display: none; 
+}
+
+.hero-posters img{
+    max-width: 180px;
+    margin: 1px;
+    	transition: transform ease-in-out 400ms;
+    border-radius: 5px;
+}
+
+.hero-posters img:hover{
+    -webkit-transform: scale(1.15);
+}
+
+.homepage-hits{
+    color: #999;
+    margin: 15px 50px 5px 80px;
+    font-weight: 100;
+    
+    
+      background: -webkit-linear-gradient(57deg, #00C6A7 0%, #1E4D92 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer{
+    font-family: 'Rubik-light', sans-serif;
+    
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+}
+
+ 
+
+#content-container{
+    min-height: 600px;
+    padding: 80px;
+    padding-top:40px!important;
+}
+
+.greyd_menu{
+    opacity: 0.3;
+    pointer-events: none;
+    
+}
+
+.insert_form{
+    padding-top: 30px;
+    width: 50%;
+    float:left;
+    padding-left: 50px;
+
+}
+
+.insert_form form{
+    width: 100%;
+}
+
+ul.coachNav{
+ width: 90%;
+    margin: auto;
+}
+
+.pageNav{
+    float:left;
+    width:20%;
+}
+
+ul.coachNav li a {
+    margin: auto;
+    color: #333;
+    cursor: pointer;
+}
+
+ul.coachNav li a.activeNav {
+	background: linear-gradient(65deg, #CE303C -25%, #3470C6 100%);
+	border-radius: 5px;
+	box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
+    color: #fff;
+}
+
+ul.coachNav li {
+	float: none;
+	margin: 15px;
+}
+
+#addPlayer, #addGame, #addStat, #modUser, #modPlayer, #modStat{
+    display: none;
+}
+
+.fans_output{
+    float:left;
+    width: 80%;
+}
